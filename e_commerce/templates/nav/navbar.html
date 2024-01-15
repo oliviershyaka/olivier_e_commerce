@@ -1,0 +1,93 @@
+{% load static %}
+<nav class="fixed-top navbar navbar-expand-lg bg-secondary scrolled">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <div class="logo ">PCD Logo </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'base' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'AboutUs' %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'list_of_products' %}">Our Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contactUs' %}">Contact</a>
+          </li>
+          
+          {% if user.is_authenticated %}
+            <!-- Display user-specific content when logged in -->
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#">{{ user.username }}</a>
+            </li>
+            <li class="nav-item">
+              {% if user.account.profile_image %}
+                <img src="{{ user.account.profile_image.url }}" alt="{{ user.username }}" class="rounded-circle"
+                     width="30" height="30">
+              {% else %}
+                <img src="{% static 'image/8.png' %}" alt="Default" class="rounded-circle"
+                     width="30" height="30">
+              {% endif %}
+            </li>
+            <li class="nav-item">
+              <form method="post" action="{% url 'logout' %}" id="logout-form">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{% url 'base' %}">
+            </form>
+              <li><a class="dropdown-item" href="#" onclick="confirmLogout()">Logout</a></li>
+            </li>
+          {% else %}
+            <!-- Display login and register buttons when not logged in -->
+            <div class="d-flex gap-2">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'newUser' %}">Create Acount</a>
+              </li>
+            </div>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script>
+    function confirmLogout() {
+      swal({
+        title: "Are you sure?",
+        text: "You want To logout",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      }).then((result) => {
+        if (result) {
+          // User confirmed
+          swal({
+            text: "You are Logged out!",
+            icon: "success",
+            buttons: false,
+            timer: 3500,
+          }).then(() => {
+            document.getElementById('logout-form').submit();
+          });
+        } else {
+          // User did not confirm
+          swal({
+            text: "Ok You are still logged In",
+            timer: 3500,
+            buttons: false,
+            
+          });
+        }
+      });
+    }
+  </script>

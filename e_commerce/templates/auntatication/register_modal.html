@@ -1,0 +1,144 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+    List of Products - Your Title
+{% endblock %}
+
+{% block content %}
+<div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="RegisterModalLabel">Register Model</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <form method="post" action="" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="modal-body">
+        {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+          Please correct the errors below.
+        </div>
+        {% endif %}
+
+        <div class="row">
+          <!-- Form field for user_name -->
+          <div class="col">
+            <label for="user_name"> First Name</label>
+            <div class="form-group-sm mt-2">
+              {{ form.first_name }}
+              {{ form.first_name.errors }}
+            </div>
+          </div>
+          <div class="col">
+            <label for="Email">Last Name</label>
+            <div class="form-group-sm mt-2">
+              {{ form.last_name}}
+              {{ form.last_name.errors }}
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="user_name">User Name</label>
+            <div class="form-group-sm mt-2">
+              {{ form.username }}
+              <div class="text-danger">
+                {% for error in form.username.errors %}
+                {{ error }}
+                {% if not forloop.last %}<br>{% endif %}
+                {% endfor %}
+            </div>
+            </div>
+          </div>
+          <div class="col">
+            <label for="Email">Email</label>
+            <div class="form-group-sm mt-2">
+              {{ form.email}}
+              <div class="text-danger">
+                {% for error in form.email.errors %}
+                {{ error }}
+                {% if not forloop.last %}<br>{% endif %}
+                {% endfor %}
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="user_name">phone_number</label>
+            <div class="form-group-sm mt-2">
+              {{ form.phone_number }}
+              <div class="text-danger">
+                  {{ form.phone_number.errors }}
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <label for="Email">company_name</label>
+            <div class="form-group-sm mt-2">
+              {{ form.company_name }}
+                        
+              <div class="text-danger">
+                  {{ form.company_name.errors }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-none">
+          {{ form.address_id.label_tag }}
+          {{ form.address_id }}
+          {{ form.address_id.errors }}
+          </div>
+        <div class="d-none">
+          {{ form.user_role.label_tag }}
+          {{ form.user_role }}
+          {{ form.user_role.errors }}
+          </div>
+          <div class="row">
+            <!-- Form field for Gender -->
+            <div class="col-12 col-md-6">
+              <label for="gender">Gender</label>
+              <div class="form-group mt-2">
+                {{ form.gender }}
+                {{ form.gender.errors }}
+              </div>
+            </div>
+          
+            <!-- Form field for Profile Image -->
+            <div class="col-12 col-md-6">
+              <label for="profile_image">Profile Image</label>
+              <div class="form-group mt-2">
+                {{ form.profile_image }}
+                <div class="text-danger">
+                  {{ form.profile_image.errors }}
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        <div class="row">
+          <!-- Form field for user_name -->
+          <div class="col">
+            <label for="user_name">password</label>
+            <div class="form-group-sm mt-2">
+              {{ form.password1 }}
+              {{ form.password1.errors }}
+            </div>
+          </div>
+          <div class="col">
+            <label for="user_name">Comfirm password</label>
+            <div class="form-group-sm mt-2">
+              {{ form.password2 }}
+              {{ form.password2.errors }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" onclick="submitForm()">Register</button>
+      </div>
+    </form>
+  </div>
+
+  {% endblock %}
