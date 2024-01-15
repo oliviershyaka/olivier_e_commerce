@@ -1,0 +1,64 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'poppins', sans-serif;
+}
+
+body nav{
+    display: flex;
+    justify-content: center;
+    margin-left: 100vh;
+    background: url('../templates/image/background.png') no-repeat;
+    background-size: cover;
+
+}
+header{
+top: 0;
+left: 0;
+right: o;
+position: fixed;
+width: 95%;
+padding: 20px, 100px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 99;
+margin-left: 30px;
+
+
+}
+
+.shyaka{
+    padding-top: 280px;
+    margin-left: -1000px;
+    font-size: small ;
+     }
+
+.shyaka p{
+font-size: 30px;
+}
+
+.shyaka p  span{
+    color: #fff;
+    }
+    
+
+.logo{
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+
+
+
+

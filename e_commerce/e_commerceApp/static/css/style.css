@@ -1,0 +1,18 @@
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align content at the top */
+    height: 90vh; /* Set the height of the section to the viewport height */
+    background: rgb(33, 31, 31) url('../image/4.jpg') no-repeat;
+    background-size: cover; /* Use 'cover' to cover the entire section */
+}
+
+
+.equal-height {
+    height: 100%;
+    object-fit: cover;
+}
+
+

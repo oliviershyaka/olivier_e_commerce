@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E_comnmerce</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  </head>
+
+<body class="px-3"> 
+    <div>
+        <nav class="fixed-top  navbar navbar-expand-lg bg-secondary scrolled">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+               <div class="logo ">PCD Logo </div>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Align the <ul> to the right -->
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#About">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Services">Our Product</a>
+                            
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <div class="d-flex gap-2">
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#LoginModal">
+                                Login
+                            </button>
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#RegisterModal">
+                                Register
+                            </button>
+                        </div>
+                        
+                    </ul>
+                </div>
+            </div>
+          </nav>
+        <section class="main pt-5" id="home">
+            <div class="pt-5 text-white">
+                <p class="h3 fw-bold">Welcome To, <br> Pro-tech Computer Design.</p><br>
+                <!-- Add any other content here -->
+            </div>
+            
+        </section>
+        <hr>
+<!-- About 1 - Bootstrap Brain Component -->
+<section class="py-3 py-md-5 py-xl-8" id="About">
+    <div class="container">
+      <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+        <div class="col-12 col-lg-6 col-xl-5">
+          <img class="img-fluid rounded" loading="lazy" src="../static/image/2.jpg" alt="">
+        </div>
+        <div class="col-12 col-lg-6 col-xl-7">
+          <div class="row justify-content-xl-center">
+            <div class="col-12 col-xl-11">
+              <h2 class="h1 mb-3">Who Are We?</h2>
+              <p class="lead fs-4 text-secondary mb-3">We help people to build incredible brands and superior products. Our perspective is to furnish outstanding captivating services.</p>
+              <p class="mb-5">Nullam gravida orci ac luctus molestie. Fusce finibus congue erat, non aliquam magna tincidunt at. Aenean lacinia arcu ex, sed pharetra nibh porta a. Curabitur vel consequat nibh, ac interdum nisl. Nunc pulvinar nec massa vitae sollicitudin.</p>
+              <div class="row gy-4 gy-md-0 gx-xxl-5X">
+                <div class="col-12 col-md-6">
+                  <div class="d-flex">
+                    <div class="me-4 text-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                        <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="mb-3">Versatile Brand</h4>
+                      <p class="text-secondary mb-0">We are crafting a digital method that subsists life across all mediums.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="d-flex">
+                    <div class="me-4 text-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                        <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="mb-3">Digital Agency</h4>
+                      <p class="text-secondary mb-0">We believe in innovation by merging primary with elaborate ideas.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+        <section class="pt-5" id="Services">
+            <div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div class="section-headline text-center">
+                        <h2>All Products</h2>
+                      </div>
+                    </div>
+                  </div>
+            <div class="row row-cols-1 row-cols-md-5 container text-center">
+              {% for product in products %}
+              <div class="col">
+                  <div class="card b-0 h-75 d-flex align-items-center P-3">
+                      <img src="{{ product.product_image.url }}" class="card-img-top img-fluid h-50" alt="image">
+                      <div class="card-body">
+                          <h5 class="card-title">{{ product.product_name }}</h5>
+                          <span class="bg-secondary P-3">
+                              <i class="fa-solid fa-money-bill-1-wave"></i> {{ product.product_price }} Rwf
+                          </span>
+                      </div>
+                      <div class="flex-row P-2">
+                          <button type="button" class="btn btn-outline-secondary btn-sm">Add to Cart</button>
+                          <button type="button" class="btn btn-outline-secondary btn-sm">View more</button>
+                      </div>
+                  </div>
+              </div>
+              {% endfor %}
+            </div> 
+        </div>     
+        </section>
+<hr>
+<!-- ======= Contact Section ======= -->
+<section id="contact">
+<div id="contact" class="contact-area">
+    <div class="contact-inner area-padding">
+      <div class="contact-overly"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="section-headline text-center">
+              <h2>Contact us</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- First Column: Contact Information -->
+          <div class="col-md-6">
+            <div class="contact-icon text-center">
+              <div class="single-icon">
+                <i class="fa fa-phone"></i>
+                <p>
+                  Call: +250 788 938 793<br>
+                  <span>Monday-Friday (9am-5pm)</span>
+                </p>
+              </div>
+            </div>
+            <div class="contact-icon text-center">
+              <div class="single-icon">
+                <i class="fa fa-envelope"></i>
+                <p>
+                  Email: info@academiavision.com<br>
+                  <span>Web: www.academiavision.com</span>
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Second Column: Contact Form -->
+          <div class="col-md-6">
+            <div  class="form contact-form">
+              <form name="submit-to-google-sheet" class="php-email-form" id="contact-form">
+                <div class="form-group-sm mt-2">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group-sm mt-2 mt-3">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group-sm mt-2 mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group-sm mt-2 mt-3">
+                  <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+               
+                <div class="text-center">
+                <button type="submit" name="myButton">Send Message</button>
+                <span id="mesaje"></span>
+              </div>
+              </form>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- login model -->
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="LoginModalLabel">Login</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form>
+        <div class="modal-body">
+          
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="row mb-4">
+                    <div class="col-md-6 d-flex justify-content-center">
+                      <!-- Checkbox -->
+                      <div class="form-check mb-3 mb-md-0">
+                        <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
+                        <label class="form-check-label" for="loginCheck"> Remember me </label>
+                      </div>
+                    </div>
+            
+                    <div class="col-md-6 d-flex justify-content-center">
+                      <!-- Simple link -->
+                      <a href="#!">Forgot password?</a>
+                    </div>
+                  </div>
+             
+
+        </div>
+        <div class="text-center">
+            <p>Not a member? <a href="#!">Concel To Register</a></p>
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-sm">Login</button>
+        </div>
+    </form>
+      </div>
+    </div>
+</div><!-- Bootstrap Modal -->
+
+
+
+
+  <script>
+    // Function to show Toastr error messages
+    function showToastrErrors(errors) {
+        toastr.error(errors.join('<br>'), 'Form Validation Error', {
+            closeButton: true,
+            timeOut: 5000,
+            extendedTimeOut: 2000,
+            positionClass: 'toast-top-full-width',
+            progressBar: true,
+            escapeHtml: false,
+        });
+    }
+</script>
+
+  <div class="modal fade" id="RegisterModal" tabindex="-1" aria-labelledby="RegisterModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="RegisterModalLabel">Register Model</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form method="post"  action="" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="modal-body">
+                  {% if form.errors %}
+                  <div class="alert alert-danger" role="alert">
+                      Please correct the errors below.
+                  </div>
+              {% endif %}
+
+                  <div class="row">
+                    <!-- Form field for user_name -->
+                    <div class="col">
+                      <label for="user_name">User Name</label>
+                        <div class="form-group-sm mt-2">
+                            {{ form.user_name }}
+                            {{ form.user_name.errors }}
+                        </div>
+                    </div>
+                    <div class="col">
+                      <label for="Email">Email</label>
+                        <div class="form-group-sm mt-2">
+                            {{ form.email}}
+                            {{ form.email.errors }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+                    <label for="user_name">phone_number</label>
+                      <div class="form-group-sm mt-2">
+                        {{ form.phone_number }}
+                      </div>
+                  </div>
+                  <div class="col">
+                    <label for="Email">company_name</label>
+                      <div class="form-group-sm mt-2">
+                        {{ form.company_name}}
+                      </div>
+                  </div>
+              </div>                  
+              <div class="row">
+                <!-- Form field for user_name -->
+                <div class="col">
+                  <label for="user_name">sector</label>
+                    <div class="form-group-sm mt-2">
+                      {{ form.sector}}
+                    </div>
+                </div>
+
+                <!-- Form field for Email -->
+                <div class="col">
+                  <label for="Email">Cell</label>
+                    <div class="form-group-sm mt-2">
+                      {{ form.cell}}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+              <!-- Form field for user_name -->
+              <div class="col">
+                <label for="user_name">village</label>
+                  <div class="form-group-sm mt-2">
+                    {{ form.village}}
+                  </div>
+              </div>
+
+              <!-- Form field for Email -->
+              <div class="col">
+                <label for="Email"> nearest_infrastructure</label>
+                  <div class="form-group-sm mt-2">
+                    {{ form.nearest_infrastructure}}
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+            <!-- Form field for Email -->
+            <div class="col">
+              <label for="Email"> profile_image</label>
+                <div class="form-group-sm mt-2">
+                  {{ form.profile_image}}
+                </div>
+            </div>
+          </div>   
+          <div class="row">
+            <!-- Form field for user_name -->
+            <div class="col">
+              <label for="user_name">password</label>
+                <div class="form-group-sm mt-2">
+                  {{ form.password}}
+                </div>
+            </div>
+          </div>   
+      </div>
+
+          <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" onclick="submitForm()">Register</button>
+                </div>
+            </form>
+          </div>
+          </div>
+      </div>
+  </div>
+
+
+<!-- Register model -->
+
+
+<hr>
+  <!-- End Contact Section -->
+<footer>
+    <div class="container">
+        <footer class="text-center text-lg-start" style="background-color: #db6930;">
+          <div class="container d-flex justify-content-center py-5">
+            <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+              <i class="fa fa-facebook-f"></i>
+            </button>
+            <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+              <i class="fa fa-youtube"></i>
+            </button>
+            <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+              <i class="fa fa-instagram"></i>
+            </button>
+            <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+              <i class="fa fa-twitter"></i>
+            </button>
+          </div>
+      
+          <!-- Copyright -->
+          <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <span class="text-white" >Shyaka Olivier</span>
+          </div>
+          <!-- Copyright -->
+        </footer>
+        
+      </div>
+</footer>
+    <script src="{% static 'script.js' %}"></script>
+    
+    <!-- jQuery (required for Bootstrap JavaScript) -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Other scripts if needed -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+    <script>
+      function submitForm() {
+          // Check if the form is valid before submitting
+          if ($('#registerForm')[0].checkValidity()) {
+              $('#registerForm').submit();
+          } else {
+              // Get all form errors and display them using Toastr
+              var errors = [];
+              $('.errorlist').each(function () {
+                  errors.push($(this).text().trim());
+              });
+              showToastrErrors(errors);
+          }
+      }
+  </script>
+</body>
+</html>
